@@ -22,5 +22,7 @@
     <bean id="waiter_3" class="com.flexible.pointcutbreakdown.annotation.PoliteWaiter"></bean>
     <bean class="com.flexible.pointcutbreakdown.annotation.TestAspect"></bean>
 
-
+    <!--获取连接点的信息-->
+    <bean id="waiter_4" class="com.flexible.obtainproceedingpointinfo.PoliteWaiter"></bean>
+    <bean class="com.flexible.obtainproceedingpointinfo.TestAspect"></bean>
 </beans>
