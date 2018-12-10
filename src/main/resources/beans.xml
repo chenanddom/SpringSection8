@@ -13,4 +13,14 @@
     <bean id="waiter" class="com.flexible.aspectj.PoliteWaiter"></bean>
     <bean class="com.flexible.aspectj.PreGreetingAspect"></bean>
 
-    </beans>
+
+    <!--引介增强的使用-->
+    <bean id="waiter_2" class="com.flexible.inroductionofdeclareparent.PoliteWaiter"></bean>
+    <bean class="com.flexible.inroductionofdeclareparent.EnableSellerAspect"></bean>
+
+    <!--切点详解之@annotation-->
+    <bean id="waiter_3" class="com.flexible.pointcutbreakdown.annotation.PoliteWaiter"></bean>
+    <bean class="com.flexible.pointcutbreakdown.annotation.TestAspect"></bean>
+
+
+</beans>
