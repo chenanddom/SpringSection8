@@ -1,6 +1,9 @@
 package com.flexible.aspectj;
 
+import org.junit.Test;
 import org.springframework.aop.aspectj.annotation.AspectJProxyFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,5 +25,12 @@ public class Demo {
         //生成切入的代理对象
         Waiter proxy = factory.getProxy();
         proxy.greetTo("张三");
+    }
+    @Test
+    public void testMethod(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:beans.xml");
+        Waiter waiter = (Waiter) context.getBean("waiter");
+        waiter.greetTo("zhangsan");
+
     }
 }
